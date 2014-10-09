@@ -2136,7 +2136,7 @@ class Sentiment(lazydict):
             if w is None:
                 index += 1
                 continue
-            for i in reversed(xrange(1, max(1, ngrams))):
+            for i in reversed(range(1, max(1, ngrams))):
                 # Known idioms ("hit the spot").
                 if index < len(words) - i:
                     idiom = words[index:index+i+1]

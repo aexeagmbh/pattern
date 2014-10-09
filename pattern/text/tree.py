@@ -341,7 +341,7 @@ class Chunk(object):
         return self.words[-1].index + 1
     @property
     def range(self):
-        return range(self.start, self.stop)
+        return list(range(self.start, self.stop))
     @property
     def span(self):
         return (self.start, self.stop)

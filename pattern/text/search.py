@@ -174,7 +174,7 @@ def variations(iterable, optional=lambda x: False):
     for p in product([False, True], repeat=sum(o)):
         p = list(p)
         v = [b and (b and p.pop(0)) for b in o]
-        v = tuple(iterable[i] for i in xrange(len(v)) if not v[i])
+        v = tuple(iterable[i] for i in range(len(v)) if not v[i])
         a.add(v)
     # Longest-first.
     return sorted(a, cmp=lambda x, y: len(y) - len(x))
